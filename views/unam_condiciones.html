@@ -1,0 +1,1151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>UNAM_PUNTUACIONES</title>
+</head>
+
+<body>
+
+    <style>
+        .s1 {
+            min-height: 100vh;
+        }
+
+        .c_left {
+            background-image: url("https://aulax.mx/wp-content/uploads/2021/10/Artboard_7.png");
+            background-size: cover;
+            background-position: right;
+            color: white;
+            text-align: center;
+            padding: 100px;
+        }
+
+        .c_right {
+            padding: 80px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+
+        }
+
+        .c_right>h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #5658A6;
+            font-weight: bold;
+            font-size: 50px;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .c_right>p {
+            font-family: 'Roboto', sans-serif;
+            color: #b1b1b1;
+            font-weight: 300;
+            font-size: 15px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 35px;
+            text-align: center;
+
+        }
+
+        .inputs>select {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: rgba(86, 88, 166, .05);
+            border-style: none;
+            border-radius: 10px;
+        }
+
+        .BTNs {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            background-color: #5658A6;
+            border-radius: 10px;
+            margin-top: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-style: none;
+        }
+
+        .BTNs:hover {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            background-color: rgba(86, 88, 166, .5);
+            border-radius: 10px;
+            margin-top: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-style: none;
+            transform: scale(0.95);
+        }
+
+        .bloque_dos {
+
+            padding: 10%;
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <div class="container-fluid">
+        <div class="row s1">
+            <div class="col-5 c_left">
+                <img src="https://aulax.mx/wp-content/uploads/2021/10/Aulax-editable-06.png" width="180px"
+                    style="padding-bottom: 20px; text-align: center !important;">
+
+                <h1 style="font-size: 35px; font-weight: bold;">¿No sabes cuánto necesitas?</h1>
+                <p style="font-weight: 300; padding-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin sit amet urna iaculis, volutpat libero sit amet, sagittis tellus.</p>
+
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_x4iz0ok8.json" mode="bounce"
+                    background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                </lottie-player>
+
+            </div>
+            <div class="col-7 c_right">
+
+                <img src="https://aulax.mx/wp-content/uploads/2021/10/60_Calculator-min.png" alt="calculadora" width="80px" class="center">
+
+                <h1>Ingreso a la UNAM</h1>
+                <p><strong>¿Cuántos puntos necesito para entrar a la UNAM?</strong>
+                    Elige un área de estudio y la carrera para conocer los aciertos
+                    del último examen de admisión. Descubre los aciertos que requieres para ingresar en la UNAM</p>
+
+                <form class="inputs">
+                    <!--INICIO DE FORM-->
+                    <label style="padding-bottom: 20px;">Escoge el área de tu interés:</label>
+
+                    <select style="margin-bottom: 10px;" onselect="mostrarFormularios()" class="form-select"
+                        aria-label="AREA" id="AREA" name="AREA">
+                        <option value="0" selected>Elige una de las 4 áreas de estudio de la UNAM</option>
+                        <option value="1">Área 1: Ciencias fisico matemáticas y de las ingenierías</option>
+                        <option value="2">Área 2: Ciencias biologicas, químicas, y de la salud</option>
+                        <option value="3">Área 3: Ciencias sociales</option>
+                        <option value="4">Área 4: Facultad de filosofía y letras</option>
+                    </select>
+                    <br>
+
+                    <!--ÁREA 1-->
+                    <label style="padding-bottom: 20px;" id="label2">Escoge tu carrera:</label>
+
+                    <select class="form-select" aria-label="AREA1" id="AREA1" name="AREA1">
+                        <option value='0' selected>...</option>
+                        <option value='1'>ACTUARÍA</option>
+                        <option value='2'>ARQUITECTURA</option>
+                        <option value='3'>ARQUITECTURA DEL PAISAJE</option>
+                        <option value='4'>CIENCIA DE MATERIALES SUSTENTABLES</option>
+                        <option value='5'>CIENCIAS DE LA COMPUTACIÓN</option>
+                        <option value='6'>CIENCIAS DE LA TIERRA</option>
+                        <option value='7'>DISEÑO INDUSTRIAL</option>
+                        <option value='8'>FÍSICA</option>
+                        <option value='9'>FÍSICA BIOMÉDICA</option>
+                        <option value='10'>GEOCIENCIAS</option>
+                        <option value='11'>INGENIERÍA AEROESPACIAL</option>
+                        <option value='12'>INGENIERÍA AMBIENTAL</option>
+                        <option value='13'>INGENIERÍA CIVIL</option>
+                        <option value='14'>INGENIERÍA DE MINAS Y METALURGIA</option>
+                        <option value='15'>INGENIERÍA ELÉCTRICA Y ELÉCTRONICA</option>
+                        <option value='16'>INGENIERÍA EN COMPUTACION</option>
+                        <option value='17'>INGENIERÍA EN TELECOMUNICACIONES, SISTEMAS Y ELECTRONICA</option>
+                        <option value='18'>INGENIERÍA GEOFÍSICA</option>
+                        <option value='19'>INGENIERÍA GEOLOGÍCA</option>
+                        <option value='20'>INGENIERÍA GEOMÁTICA</option>
+                        <option value='21'>INGENIERÍA INDUSTRIAL</option>
+                        <option value='22'>INGENIERÍA MECÁNICA</option>
+                        <option value='23'>INGENIERÍA MECÁNICA ELECTRICA</option>
+                        <option value='24'>INGENIERÍA PETROLERA</option>
+                        <option value='25'>INGENIERÍA QUÍMICA</option>
+                        <option value='26'>INGENIERÍA QUÍMICA METALÚRGICA</option>
+                        <option value='27'>MATEMÁTICAS</option>
+                        <option value='28'>MATEMÁTICAS APLICADAS</option>
+                        <option value='29'>MATEMÁTICAS APLICADAS Y COMPUTACIÓN</option>
+                        <option value='30'>TECNOLOGÍAS PARA LA INFORMACIÓN EN CIENCIAS</option>
+                        <option value='31'>URBANISMO</option>
+                    </select>
+
+                    <!--ÁREA 2-->
+                    <select class="form-select" aria-label="AREA2" id="AREA2" name="AREA2">
+                        <option value='0' selected>...</option>
+                        <option value='1'>BIOLOGÍA</option>
+                        <option value='2'>CIRUJANO DENTISTA</option>
+                        <option value='3'>ENFERMERÍA Y OBSTETRICÍA</option>
+                        <option value='4'>INGENIERÍA AGRÍCOLA</option>
+                        <option value='5'>INGENIERÍA EN ALIMENTOS</option>
+                        <option value='6'>MEDICINA VETERINARIA Y ZOOTECNIA</option>
+                        <option value='7'>MÉDICO CIRUJANO</option>
+                        <option value='8'>OPTOMETRÍA</option>
+                        <option value='9'>PSICOLOGÍA</option>
+                        <option value='10'>QUÍMICA</option>
+                        <option value='11'>QUÍMICA DE ALIMENTOS</option>
+                        <option value='12'>QUÍMICA FARMACÉUTICO BIOLOGICA</option>
+                        <option value='13'>QUÍMICA INDUSTRIAL</option>
+                        <option value='14'>CIENCIAS AMBIENTALES</option>
+                        <option value='15'>MANEJO SUSTENTABLE DE ZONAS COSTERAS</option>
+                        <option value='16'>BIOQUÍMICA DIAGNÓSTICA</option>
+                        <option value='17'>FARMACIA</option>
+                        <option value='18'>ENFERMERÍA</option>
+                        <option value='19'>FISIOTERAPIA</option>
+                        <option value='20'>ODONTOLOGÍA</option>
+                        <option value='21'>NUTRIOLOGÍA</option>
+                    </select>
+
+                    <!--ÁREA 3-->
+                    <select class="form-select" aria-label="AREA3" id="AREA3" name="AREA3">
+                        <option value='0' selected>...</option>
+                        <option value='1'>ADMINISTRACIÓN</option>
+                        <option value='2'>CIENCIAS DE LA COMUNICACIÓN (PERIODÍSMO)</option>
+                        <option value='3'>CIENCIAS POLÍTICAS Y ADMINISTRACION PUBLICA</option>
+                        <option value='4'>CONTADURÍA</option>
+                        <option value='5'>DERECHO</option>
+                        <option value='6'>ECONOMÍA</option>
+                        <option value='7'>GEOGRAFÍA</option>
+                        <option value='8'>INFORMÁTICA</option>
+                        <option value='9'>PLANIFICACIÓN PARA EL DESARROLLO AGR</option>
+                        <option value='10'>RELACIONES INTERNACIONALES</option>
+                        <option value='11'>SOCIOLOGÍA</option>
+                        <option value='12'>TRABAJO SOCIAL</option>
+                        <option value='13'>ECONOMÍA INDUSTRIAL</option>
+                        <option value='14'>ADMINISTRACIÓN AGROPECUARIA</option>
+                        <option value='15'>COMUNICACIÓN</option>
+                        <option value='16'>COMUNICACIÓN Y PERIODISMO</option>
+                        <option value='17'>ESTUDIOS SOCIALES Y GESTIÓN LOCAL</option>
+                        <option value='18'>ANTROPOLOGÍA</option>
+                        <option value='19'>DESARROLLO TERRITORIAL</option>
+                        <option value='20'>GEOGRAFÍA APLICADA</option>
+                    </select>
+
+                    <!--ÁREA 4-->
+                    <select class="form-select" aria-label="AREA4" id="AREA4" name="AREA4">
+                        <option value='0' selected>...</option>
+                        <option value='1'>ARTES VISUALES</option>
+                        <option value='2'>CANTO</option>
+                        <option value='3'>COMPOSICIÓN</option>
+                        <option value='4'>EDUCACIÓN MÚSICAL</option>
+                        <option value='5'>ENSEÑANZA DE INGLÉS</option>
+                        <option value='6'>ESTUDIOS LATINOAMERICANOS</option>
+                        <option value='7'>ETNOMUSICOLOGÍA</option>
+                        <option value='8'>FILOSOFÍA</option>
+                        <option value='9'>HISTORIA</option>
+                        <option value='10'>INSTRUMENTISTA</option>
+                        <option value='11'>LENGUA Y LITERATURAS HISPANICAS</option>
+                        <option value='12'>LENGUA Y LIT MODERNAS ALEMANAS</option>
+                        <option value='13'>LENGUA Y LIT MODERNAS FRANCESAS</option>
+                        <option value='14'>LENGUA Y LIT MODERNAS INGLESAS</option>
+                        <option value='15'>LENGUA Y LIT MODERNAS ITALIANAS</option>
+                        <option value='16'>LETRAS CLÁSICAS</option>
+                        <option value='17'>LITERATURA DRAMÁTICA Y TEATRO</option>
+                        <option value='18'>PEDAGOGÍA</option>
+                        <option value='19'>PIANO</option>
+                        <option value='20'>DISEÑO Y COMUNICACIÓN VISUAL</option>
+                        <option value='21'>ENSEÑANZA DE ALEMÁN COMO LENGUA EXTRANJERA</option>
+                        <option value='22'>ENSEÑANZA DE ESPAÑOL COMO LENGUA EXTRANJERA</option>
+                        <option value='23'>ENSEÑANZA DE FRANCÉS COMO LENGUA EXTRANJERA</option>
+                        <option value='24'>ENSEÑANZA DE INGLÉS COMO LENGUA EXTRANJERA</option>
+                        <option value='25'>ENSEÑANZA DE ITALIANO COMO LENGUA EXTRANJERA</option>
+                        <option value='26'>DESARROLLO Y GESTIÓN INTERCULTURALES</option>
+                        <option value='27'>LENGUA Y LIT MODERNAS PORTUGUESAS</option>
+                        <option value='28'>GEOHISTORIA</option>
+                        <option value='29'>LITERATURA INTERCULTURAL</option>
+                        <option value='30'>HISTORIA DEL ARTE</option>
+                        <option value='31'>ARTE Y DISEÑO</option>
+                        <option value='32'>TEATRO Y ACTUACIÓN</option>
+                        <option value='33'>ADMINISTRACIÓN DE ARCHIVOS Y GESTIÓN DOCUMENTAL</option>
+                        <option value='34'>MÚSICA Y TECNOLOGÍA ARTISTICA</option>
+                        <option value='35'>LINGUÍSTICA APLICADA</option>
+                        <option value='36'>TRADUCCIÓN</option>
+                    </select>
+                    <button type="button" class="btn btn-primary BTNs" id="BTN1" onclick="obtenerCarrera1()">Ver puntaje
+                    </button>
+                    <button type="button" class="btn btn-primary BTNs" id="BTN2" onclick="obtenerCarrera2()">Ver puntaje
+                    </button>
+                    <button type="button" class="btn btn-primary BTNs" id="BTN3" onclick="obtenerCarrera3()">Ver puntaje
+                    </button>
+                    <button type="button" class="btn btn-primary BTNs" id="BTN4" onclick="obtenerCarrera4()">Ver puntaje
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bloque_dos" style="background-image: url('https://aulax.mx/wp-content/uploads/2021/10/Fondo-Figuras.jpg'); background-size: cover;"
+        id="bloque_dos">
+        <div class="container-fluid  c_right " style="background: rgba( 255, 255, 255, 0.9 );
+        box-shadow: 0 8px 32px 0 rgba( 86, 88, 166, 0.37 );
+        backdrop-filter: blur( 7px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 1 );">
+            <h1>Resultado</h1>
+            <p><strong>¿Cuántos puntos necesito para entrar a la UNAM?</strong>
+                Elige un área de estudio y la carrera para conocer los aciertos
+                del último examen de admisión. Descubre los aciertos que requieres para ingresar en la UNAM</p>
+
+            <style>
+                .text {
+                    color: black;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: bold;
+                }
+
+                .text2 {
+                    color: black;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                }
+
+                .text3 {
+                    color: #5658A6;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                }
+
+                .areaTexto {
+                    text-align: center;
+                    font-size: 20px;
+                }
+            </style>
+
+            <h2 class="areaTexto" id="nombreArea"></h2>
+            <p style="margin-bottom: 5px; font-size: 15px;" id="CarreraUnam"></p>
+
+            <div class="row text">
+                <div class="col">
+                    Modalidad
+                </div>
+                <div class="col">
+                    Plantel
+                </div>
+                <div class="col-2">
+                    Puntaje
+                </div>
+                <div class="col-2">
+                    Aspirantes
+                </div>
+                <div class="col-2">
+                    Seleccionados
+                </div>
+            </div>
+
+            <div class="row text2" style="margin-top: 25px; ">
+                <div class="col">
+                    <p id="modalidad1"></p>
+                </div>
+                <div class="col">
+                    <p id="plantel1"></p>
+                </div>
+                <div class="col-2">
+                    <p id="puntaje1"></p>
+                </div>
+                <div class="col-2">
+                    <p id="aspirantes1"></p>
+                </div>
+                <div class="col-2">
+                    <p id="seleccionados1"></p>
+                </div>
+            </div>
+
+            <div class="row text2" style="margin-top: 25px; ">
+                <div class="col">
+                    <p id="modalidad2"></p>
+                </div>
+                <div class="col">
+                    <p id="plantel2"></p>
+                </div>
+                <div class="col-2">
+                    <p id="puntaje2"></p>
+                </div>
+                <div class="col-2">
+                    <p id="aspirantes2"></p>
+                </div>
+                <div class="col-2">
+                    <p id="seleccionados2"></p>
+                </div>
+            </div>
+
+            <div class="row text2" style="margin-top: 25px; ">
+                <div class="col">
+                    <p id="modalidad3"></p>
+                </div>
+                <div class="col">
+                    <p id="plantel3"></p>
+                </div>
+                <div class="col-2">
+                    <p id="puntaje3"></p>
+                </div>
+                <div class="col-2">
+                    <p id="aspirantes3"></p>
+                </div>
+                <div class="col-2">
+                    <p id="seleccionados3"></p>
+                </div>
+            </div>
+
+            <div class="row text2" style="margin-top: 25px; ">
+                <div class="col">
+                    <p id="modalidad4"></p>
+                </div>
+                <div class="col">
+                    <p id="plantel4"></p>
+                </div>
+                <div class="col-2">
+                    <p id="puntaje4"></p>
+                </div>
+                <div class="col-2">
+                    <p id="aspirantes4"></p>
+                </div>
+                <div class="col-2">
+                    <p id="seleccionados4"></p>
+                </div>
+            </div>
+
+            <div class="row text2" style="margin-top: 25px; ">
+                <div class="col">
+                    <p id="modalidad5"></p>
+                </div>
+                <div class="col">
+                    <p id="plantel5"></p>
+                </div>
+                <div class="col-2">
+                    <p id="puntaje5"></p>
+                </div>
+                <div class="col-2">
+                    <p id="aspirantes5"></p>
+                </div>
+                <div class="col-2">
+                    <p id="seleccionados5"></p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        //ObtenerCarreraUno
+        function obtenerCarrera1() {
+            document.getElementById('modalidad1').innerHTML = ' '; document.getElementById('plantel1').innerHTML = ' '; document.getElementById('puntaje1').innerHTML = ' '; document.getElementById('aspirantes1').innerHTML = ' '; document.getElementById('seleccionados1').innerHTML = ' ';
+            document.getElementById('modalidad2').innerHTML = ' '; document.getElementById('plantel2').innerHTML = ' '; document.getElementById('puntaje2').innerHTML = ' '; document.getElementById('aspirantes2').innerHTML = ' '; document.getElementById('seleccionados2').innerHTML = ' ';
+            document.getElementById('modalidad3').innerHTML = ' '; document.getElementById('plantel3').innerHTML = ' '; document.getElementById('puntaje3').innerHTML = ' '; document.getElementById('aspirantes3').innerHTML = ' '; document.getElementById('seleccionados3').innerHTML = ' ';
+            document.getElementById('modalidad4').innerHTML = ' '; document.getElementById('plantel4').innerHTML = ' '; document.getElementById('puntaje4').innerHTML = ' '; document.getElementById('aspirantes4').innerHTML = ' '; document.getElementById('seleccionados4').innerHTML = ' ';
+            document.getElementById('modalidad5').innerHTML = ' '; document.getElementById('plantel5').innerHTML = ' '; document.getElementById('puntaje5').innerHTML = ' '; document.getElementById('aspirantes5').innerHTML = ' '; document.getElementById('seleccionados5').innerHTML = ' ';
+
+            var strUser = e.options[e.selectedIndex].value;
+            var strUser1text = eA1.options[eA1.selectedIndex].value;
+
+            var strUserText = e.options[e.selectedIndex].text;
+            var strUser1 = eA1.options[eA1.selectedIndex].text;
+
+            document.getElementById("nombreArea").innerHTML = strUserText;
+            document.getElementById("CarreraUnam").innerHTML = strUser1;
+
+            if (strUser == 1 & strUser1text == 1) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado';
+                document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias';
+                document.getElementById('puntaje1').innerHTML = '111';
+                document.getElementById('aspirantes1').innerHTML = '1982';
+                document.getElementById('seleccionados1').innerHTML = '58';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado';
+                document.getElementById('plantel2').innerHTML = 'FES Acatlán';
+                document.getElementById('puntaje2').innerHTML = '105';
+                document.getElementById('aspirantes2').innerHTML = '959';
+                document.getElementById('seleccionados2').innerHTML = '51';
+
+            } else if (strUser == 1 & strUser1text == 2) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Arquitectura'; document.getElementById('puntaje1').innerHTML = '98'; document.getElementById('aspirantes1').innerHTML = '5401'; document.getElementById('seleccionados1').innerHTML = '260';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Acatlán'; document.getElementById('puntaje2').innerHTML = '94'; document.getElementById('aspirantes2').innerHTML = '1930'; document.getElementById('seleccionados2').innerHTML = '86';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Aragón'; document.getElementById('puntaje3').innerHTML = '86'; document.getElementById('aspirantes3').innerHTML = '2297'; document.getElementById('seleccionados3').innerHTML = '95';
+                
+            } else if (strUser == 1 & strUser1text == 3) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Arquitectura'; document.getElementById('puntaje1').innerHTML = '93'; document.getElementById('aspirantes1').innerHTML = '452'; document.getElementById('seleccionados1').innerHTML = '25';
+
+            } else if (strUser == 1 & strUser1text == 4) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '62'; document.getElementById('aspirantes1').innerHTML = '71'; document.getElementById('seleccionados1').innerHTML = '46';
+
+            } else if (strUser == 1 & strUser1text == 5) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias'; document.getElementById('puntaje1').innerHTML = '108'; document.getElementById('aspirantes1').innerHTML = '1052'; document.getElementById('seleccionados1').innerHTML = '43';
+
+            } else if (strUser == 1 & strUser1text == 6) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Ciencias de la Tierra'; document.getElementById('puntaje1').innerHTML = '103'; document.getElementById('aspirantes1').innerHTML = '422'; document.getElementById('seleccionados1').innerHTML = '30';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Juriquilla, Querétaro'; document.getElementById('puntaje2').innerHTML = '87'; document.getElementById('aspirantes2').innerHTML = '184'; document.getElementById('seleccionados2').innerHTML = '25';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Mérida, Yucatán'; document.getElementById('puntaje3').innerHTML = '62'; document.getElementById('aspirantes3').innerHTML = '51'; document.getElementById('seleccionados3').innerHTML = '27';
+
+            } else if (strUser == 1 & strUser1text == 7) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Aragón'; document.getElementById('puntaje1').innerHTML = '95'; document.getElementById('aspirantes1').innerHTML = '934'; document.getElementById('seleccionados1').innerHTML = '23';
+
+            } else if (strUser == 1 & strUser1text == 8) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias'; document.getElementById('puntaje1').innerHTML = '116'; document.getElementById('aspirantes1').innerHTML = '2630'; document.getElementById('seleccionados1').innerHTML = '82';
+
+            } else if (strUser == 1 & strUser1text == 9) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias'; document.getElementById('puntaje1').innerHTML = '112'; document.getElementById('aspirantes1').innerHTML = '563'; document.getElementById('seleccionados1').innerHTML = '14';
+
+            } else if (strUser == 1 & strUser1text == 10) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '65'; document.getElementById('aspirantes1').innerHTML = '77'; document.getElementById('seleccionados1').innerHTML = '32';
+
+            } else if (strUser == 1 & strUser1text == 11) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '116'; document.getElementById('aspirantes1').innerHTML = '925'; document.getElementById('seleccionados1').innerHTML = '10';
+
+            } else if (strUser == 1 & strUser1text == 12) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '107'; document.getElementById('aspirantes1').innerHTML = '702'; document.getElementById('seleccionados1').innerHTML = '19';
+
+            } else if (strUser == 1 & strUser1text == 13) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '96'; document.getElementById('aspirantes1').innerHTML = '1700'; document.getElementById('seleccionados1').innerHTML = '130';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Acatlán'; document.getElementById('puntaje2').innerHTML = '78'; document.getElementById('aspirantes2').innerHTML = '1049'; document.getElementById('seleccionados2').innerHTML = '104';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Aragón'; document.getElementById('puntaje3').innerHTML = '75'; document.getElementById('aspirantes3').innerHTML = '1277'; document.getElementById('seleccionados3').innerHTML = '150';
+
+            } else if (strUser == 1 & strUser1text == 14) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '91'; document.getElementById('aspirantes1').innerHTML = '288'; document.getElementById('seleccionados1').innerHTML = '25';
+
+            } else if (strUser == 1 & strUser1text == 15) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '99'; document.getElementById('aspirantes1').innerHTML = '1650'; document.getElementById('seleccionados1').innerHTML = '115';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Aragón'; document.getElementById('puntaje2').innerHTML = '86'; document.getElementById('aspirantes2').innerHTML = '640'; document.getElementById('seleccionados2').innerHTML = '63';
+
+            } else if (strUser == 1 & strUser1text == 16) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '101'; document.getElementById('aspirantes1').innerHTML = '2966'; document.getElementById('seleccionados1').innerHTML = '120';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Aragón'; document.getElementById('puntaje2').innerHTML = '90'; document.getElementById('aspirantes2').innerHTML = '1951'; document.getElementById('seleccionados2').innerHTML = '82';
+
+            } else if (strUser == 1 & strUser1text == 17) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '72'; document.getElementById('aspirantes1').innerHTML = '1021'; document.getElementById('seleccionados1').innerHTML = '90';
+
+            } else if (strUser == 1 & strUser1text == 18) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '104'; document.getElementById('aspirantes1').innerHTML = '226'; document.getElementById('seleccionados1').innerHTML = '22';
+
+            } else if (strUser == 1 & strUser1text == 19) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '95'; document.getElementById('aspirantes1').innerHTML = '233'; document.getElementById('seleccionados1').innerHTML = '30';
+
+            } else if (strUser == 1 & strUser1text == 20) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '94'; document.getElementById('aspirantes1').innerHTML = '191'; document.getElementById('seleccionados1').innerHTML = '26';
+
+            } else if (strUser == 1 & strUser1text == 21) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '99'; document.getElementById('aspirantes1').innerHTML = '1328'; document.getElementById('seleccionados1').innerHTML = '71';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Aragón'; document.getElementById('puntaje2').innerHTML = '89'; document.getElementById('aspirantes2').innerHTML = '826'; document.getElementById('seleccionados2').innerHTML = '50';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje3').innerHTML = '81'; document.getElementById('aspirantes3').innerHTML = '760'; document.getElementById('seleccionados3').innerHTML = '41';
+
+            } else if (strUser == 1 & strUser1text == 22) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '105'; document.getElementById('aspirantes1').innerHTML = '2096'; document.getElementById('seleccionados1').innerHTML = '64';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Aragón'; document.getElementById('puntaje2').innerHTML = '87'; document.getElementById('aspirantes2').innerHTML = '941'; document.getElementById('seleccionados2').innerHTML = '39';
+
+            } else if (strUser == 1 & strUser1text == 23) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '77'; document.getElementById('aspirantes1').innerHTML = '992'; document.getElementById('seleccionados1').innerHTML = '106';
+
+            } else if (strUser == 1 & strUser1text == 24) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ingeniería'; document.getElementById('puntaje1').innerHTML = '87'; document.getElementById('aspirantes1').innerHTML = '753'; document.getElementById('seleccionados1').innerHTML = '62';
+
+            } else if (strUser == 1 & strUser1text == 25) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Química'; document.getElementById('puntaje1').innerHTML = '108'; document.getElementById('aspirantes1').innerHTML = '1409'; document.getElementById('seleccionados1').innerHTML = '50';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje2').innerHTML = '86'; document.getElementById('aspirantes2').innerHTML = '713'; document.getElementById('seleccionados2').innerHTML = '66';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Zaragoza'; document.getElementById('puntaje3').innerHTML = '89'; document.getElementById('aspirantes3').innerHTML = '903'; document.getElementById('seleccionados3').innerHTML = '108';
+
+            } else if (strUser == 1 & strUser1text == 26) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Química'; document.getElementById('puntaje1').innerHTML = '108'; document.getElementById('aspirantes1').innerHTML = '326'; document.getElementById('seleccionados1').innerHTML = '28';
+
+            } else if (strUser == 1 & strUser1text == 27) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias'; document.getElementById('puntaje1').innerHTML = '107'; document.getElementById('aspirantes1').innerHTML = '815'; document.getElementById('seleccionados1').innerHTML = '121';
+
+            } else if (strUser == 1 & strUser1text == 28) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias'; document.getElementById('puntaje1').innerHTML = '33'; document.getElementById('aspirantes1').innerHTML = '437'; document.getElementById('seleccionados1').innerHTML = '108';
+
+            } else if (strUser == 1 & strUser1text == 29) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '76'; document.getElementById('aspirantes1').innerHTML = '935'; document.getElementById('seleccionados1').innerHTML = '263';
+
+            } else if (strUser == 1 & strUser1text == 30) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '67'; document.getElementById('aspirantes1').innerHTML = '72'; document.getElementById('seleccionados1').innerHTML = '41';
+
+            } else if (strUser == 1 & strUser1text == 31) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Arquitectura'; document.getElementById('puntaje1').innerHTML = '86'; document.getElementById('aspirantes1').innerHTML = '276'; document.getElementById('seleccionados1').innerHTML = '25';
+
+            }
+
+            window.location.href = '#bloque_dos';
+        }
+
+        function obtenerCarrera2() {
+            document.getElementById('modalidad1').innerHTML = ' '; document.getElementById('plantel1').innerHTML = ' '; document.getElementById('puntaje1').innerHTML = ' '; document.getElementById('aspirantes1').innerHTML = ' '; document.getElementById('seleccionados1').innerHTML = ' ';
+            document.getElementById('modalidad2').innerHTML = ' '; document.getElementById('plantel2').innerHTML = ' '; document.getElementById('puntaje2').innerHTML = ' '; document.getElementById('aspirantes2').innerHTML = ' '; document.getElementById('seleccionados2').innerHTML = ' ';
+            document.getElementById('modalidad3').innerHTML = ' '; document.getElementById('plantel3').innerHTML = ' '; document.getElementById('puntaje3').innerHTML = ' '; document.getElementById('aspirantes3').innerHTML = ' '; document.getElementById('seleccionados3').innerHTML = ' ';
+            document.getElementById('modalidad4').innerHTML = ' '; document.getElementById('plantel4').innerHTML = ' '; document.getElementById('puntaje4').innerHTML = ' '; document.getElementById('aspirantes4').innerHTML = ' '; document.getElementById('seleccionados4').innerHTML = ' ';
+            document.getElementById('modalidad5').innerHTML = ' '; document.getElementById('plantel5').innerHTML = ' '; document.getElementById('puntaje5').innerHTML = ' '; document.getElementById('aspirantes5').innerHTML = ' '; document.getElementById('seleccionados5').innerHTML = ' ';
+
+            var strUser = e.options[e.selectedIndex].value;
+            var strUser1text = eA2.options[eA2.selectedIndex].value;
+
+            var strUserText = e.options[e.selectedIndex].text;
+            var strUser1 = eA2.options[eA2.selectedIndex].text;
+
+            document.getElementById("nombreArea").innerHTML = strUserText;
+            document.getElementById("CarreraUnam").innerHTML = strUser1;
+
+            if (strUser == 2 & strUser1text == 1) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias'; document.getElementById('puntaje1').innerHTML = '105'; document.getElementById('aspirantes1').innerHTML = '2375'; document.getElementById('seleccionados1').innerHTML = '130';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Iztacala'; document.getElementById('puntaje2').innerHTML = '96'; document.getElementById('aspirantes2').innerHTML = '1592'; document.getElementById('seleccionados2').innerHTML = '110';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Zaragoza'; document.getElementById('puntaje3').innerHTML = '93'; document.getElementById('aspirantes3').innerHTML = '1531'; document.getElementById('seleccionados3').innerHTML = '115';
+
+            } else if (strUser == 2 & strUser1text == 2) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Odontología'; document.getElementById('puntaje1').innerHTML = '103'; document.getElementById('aspirantes1').innerHTML = '2713'; document.getElementById('seleccionados1').innerHTML = '116';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Iztacala'; document.getElementById('puntaje2').innerHTML = '96'; document.getElementById('aspirantes2').innerHTML = '2959'; document.getElementById('seleccionados2').innerHTML = '130';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Zaragoza'; document.getElementById('puntaje3').innerHTML = '95'; document.getElementById('aspirantes3').innerHTML = '2167'; document.getElementById('seleccionados3').innerHTML = '100';
+
+            } else if (strUser == 2 & strUser1text == 3) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Enfermería y Obstetricia'; document.getElementById('puntaje1').innerHTML = '95'; document.getElementById('aspirantes1').innerHTML = '3295'; document.getElementById('seleccionados1').innerHTML = '75';
+
+            } else if (strUser == 2 & strUser1text == 4) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '81'; document.getElementById('aspirantes1').innerHTML = '519'; document.getElementById('seleccionados1').innerHTML = '69';
+
+            } else if (strUser == 2 & strUser1text == 5) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '84'; document.getElementById('aspirantes1').innerHTML = '900'; document.getElementById('seleccionados1').innerHTML = '121';
+
+            } else if (strUser == 2 & strUser1text == 6) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Medicina Veterinaria y Zootecnia'; document.getElementById('puntaje1').innerHTML = '106'; document.getElementById('aspirantes1').innerHTML = '4456'; document.getElementById('seleccionados1').innerHTML = '85';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje2').innerHTML = '99'; document.getElementById('aspirantes2').innerHTML = '2768'; document.getElementById('seleccionados2').innerHTML = '99';
+
+            } else if (strUser == 2 & strUser1text == 7) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Medicina'; document.getElementById('puntaje1').innerHTML = '115'; document.getElementById('aspirantes1').innerHTML = '16269'; document.getElementById('seleccionados1').innerHTML = '178';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Iztacala'; document.getElementById('puntaje2').innerHTML = '113'; document.getElementById('aspirantes2').innerHTML = '6706'; document.getElementById('seleccionados2').innerHTML = '100';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Zaragoza'; document.getElementById('puntaje3').innerHTML = '111'; document.getElementById('aspirantes3').innerHTML = '4403'; document.getElementById('seleccionados3').innerHTML = '49';
+
+            } else if (strUser == 2 & strUser1text == 8) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Iztacala'; document.getElementById('puntaje1').innerHTML = '83'; document.getElementById('aspirantes1').innerHTML = '657'; document.getElementById('seleccionados1').innerHTML = '47';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato'; document.getElementById('puntaje2').innerHTML = '72'; document.getElementById('aspirantes2').innerHTML = '155'; document.getElementById('seleccionados2').innerHTML = '47';
+
+            } else if (strUser == 2 & strUser1text == 9) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Psicología'; document.getElementById('puntaje1').innerHTML = '105'; document.getElementById('aspirantes1').innerHTML = '4345'; document.getElementById('seleccionados1').innerHTML = '80';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Psicología'; document.getElementById('puntaje2').innerHTML = '87'; document.getElementById('aspirantes2').innerHTML = '1708'; document.getElementById('seleccionados2').innerHTML = '177';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Iztacala'; document.getElementById('puntaje3').innerHTML = '95'; document.getElementById('aspirantes3').innerHTML = '3095'; document.getElementById('seleccionados3').innerHTML = '112';
+                document.getElementById('modalidad4').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel4').innerHTML = 'FES Iztacala'; document.getElementById('puntaje4').innerHTML = '67'; document.getElementById('aspirantes4').innerHTML = '3143'; document.getElementById('seleccionados4').innerHTML = '600';
+                document.getElementById('modalidad5').innerHTML = 'Escolarizado'; document.getElementById('plantel5').innerHTML = 'FES Zaragoza Escolarizado 105 3,205 93'; document.getElementById('puntaje5').innerHTML = '93'; document.getElementById('aspirantes5').innerHTML = '3205'; document.getElementById('seleccionados5').innerHTML = '105';
+
+            } else if (strUser == 2 & strUser1text == 10) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Química'; document.getElementById('puntaje1').innerHTML = '111'; document.getElementById('aspirantes1').innerHTML = '968'; document.getElementById('seleccionados1').innerHTML = '30';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje2').innerHTML = '102'; document.getElementById('aspirantes2').innerHTML = '435'; document.getElementById('seleccionados2').innerHTML = '38';
+
+            } else if (strUser == 2 & strUser1text == 11) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Química'; document.getElementById('puntaje1').innerHTML = '108'; document.getElementById('aspirantes1').innerHTML = '1071'; document.getElementById('seleccionados1').innerHTML = '45';
+
+            } else if (strUser == 2 & strUser1text == 12) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Química'; document.getElementById('puntaje1').innerHTML = '111'; document.getElementById('aspirantes1').innerHTML = '3112'; document.getElementById('seleccionados1').innerHTML = '60';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Zaragoza'; document.getElementById('puntaje2').innerHTML = '104'; document.getElementById('aspirantes2').innerHTML = '2146'; document.getElementById('seleccionados2').innerHTML = '55';
+
+            } else if (strUser == 2 & strUser1text == 13) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '86'; document.getElementById('aspirantes1').innerHTML = '674'; document.getElementById('seleccionados1').innerHTML = '60';
+
+            } else if (strUser == 2 & strUser1text == 14) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Mérida, Yucatán'; document.getElementById('puntaje1').innerHTML = '67'; document.getElementById('aspirantes1').innerHTML = '111'; document.getElementById('seleccionados1').innerHTML = '45';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje2').innerHTML = '49'; document.getElementById('aspirantes2').innerHTML = '197'; document.getElementById('seleccionados2').innerHTML = '126';
+
+            } else if (strUser == 2 & strUser1text == 15) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Mérida, Yucatán'; document.getElementById('puntaje1').innerHTML = '56'; document.getElementById('aspirantes1').innerHTML = '108'; document.getElementById('seleccionados1').innerHTML = '50';
+
+            } else if (strUser == 2 & strUser1text == 16) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '101'; document.getElementById('aspirantes1').innerHTML = '1065'; document.getElementById('seleccionados1').innerHTML = '25';
+
+            } else if (strUser == 2 & strUser1text == 17) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '90'; document.getElementById('aspirantes1').innerHTML = '629'; document.getElementById('seleccionados1').innerHTML = '73';
+
+            } else if (strUser == 2 & strUser1text == 18) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Enfermería y Obstetricia'; document.getElementById('puntaje1').innerHTML = '92'; document.getElementById('aspirantes1').innerHTML = '2041'; document.getElementById('seleccionados1').innerHTML = '130';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Iztacala'; document.getElementById('puntaje2').innerHTML = '93'; document.getElementById('aspirantes2').innerHTML = '3330'; document.getElementById('seleccionados2').innerHTML = '130';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Zaragoz'; document.getElementById('puntaje3').innerHTML = '90'; document.getElementById('aspirantes3').innerHTML = '4101'; document.getElementById('seleccionados3').innerHTML = '155';
+
+            } else if (strUser == 2 & strUser1text == 19) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato'; document.getElementById('puntaje1').innerHTML = '80'; document.getElementById('aspirantes1').innerHTML = '1150'; document.getElementById('seleccionados1').innerHTML = '61';
+
+            } else if (strUser == 2 & strUser1text == 20) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato'; document.getElementById('puntaje1').innerHTML = '90'; document.getElementById('aspirantes1').innerHTML = '1163'; document.getElementById('seleccionados1').innerHTML = '70';
+
+            } else if (strUser == 2 & strUser1text == 21) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Zaragoza'; document.getElementById('puntaje1').innerHTML = '104'; document.getElementById('aspirantes1').innerHTML = '2479'; document.getElementById('seleccionados1').innerHTML = '23';
+
+            }
+
+            window.location.href = '#bloque_dos';
+        }
+
+        function obtenerCarrera3() {
+
+            document.getElementById('modalidad1').innerHTML = ' '; document.getElementById('plantel1').innerHTML = ' '; document.getElementById('puntaje1').innerHTML = ' '; document.getElementById('aspirantes1').innerHTML = ' '; document.getElementById('seleccionados1').innerHTML = ' ';
+            document.getElementById('modalidad2').innerHTML = ' '; document.getElementById('plantel2').innerHTML = ' '; document.getElementById('puntaje2').innerHTML = ' '; document.getElementById('aspirantes2').innerHTML = ' '; document.getElementById('seleccionados2').innerHTML = ' ';
+            document.getElementById('modalidad3').innerHTML = ' '; document.getElementById('plantel3').innerHTML = ' '; document.getElementById('puntaje3').innerHTML = ' '; document.getElementById('aspirantes3').innerHTML = ' '; document.getElementById('seleccionados3').innerHTML = ' ';
+            document.getElementById('modalidad4').innerHTML = ' '; document.getElementById('plantel4').innerHTML = ' '; document.getElementById('puntaje4').innerHTML = ' '; document.getElementById('aspirantes4').innerHTML = ' '; document.getElementById('seleccionados4').innerHTML = ' ';
+            document.getElementById('modalidad5').innerHTML = ' '; document.getElementById('plantel5').innerHTML = ' '; document.getElementById('puntaje5').innerHTML = ' '; document.getElementById('aspirantes5').innerHTML = ' '; document.getElementById('seleccionados5').innerHTML = ' ';
+
+            var strUser = e.options[e.selectedIndex].value;
+            var strUser1text = eA3.options[eA3.selectedIndex].value;
+
+            var strUserText = e.options[e.selectedIndex].text;
+            var strUser1 = eA3.options[eA3.selectedIndex].text;
+
+            document.getElementById("nombreArea").innerHTML = strUserText;
+            document.getElementById("CarreraUnam").innerHTML = strUser1;
+
+            if (strUser == 3 & strUser1text == 1) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Contaduría y Administración'; document.getElementById('puntaje1').innerHTML = '100'; document.getElementById('aspirantes1').innerHTML = '8481'; document.getElementById('seleccionados1').innerHTML = '390';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Contaduría y Administración'; document.getElementById('puntaje2').innerHTML = '89'; document.getElementById('aspirantes2').innerHTML = '1225'; document.getElementById('seleccionados2').innerHTML = '81';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Contaduría y Administración'; document.getElementById('puntaje3').innerHTML = '93'; document.getElementById('aspirantes3').innerHTML = '3017'; document.getElementById('seleccionados3').innerHTML = '165';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje4').innerHTML = '77'; document.getElementById('aspirantes4').innerHTML = '2398'; document.getElementById('seleccionados4').innerHTML = '235';
+
+            } else if (strUser == 3 & strUser1text == 2) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje1').innerHTML = '107'; document.getElementById('aspirantes1').innerHTML = '2606'; document.getElementById('seleccionados1').innerHTML = '77';
+
+            } else if (strUser == 3 & strUser1text == 3) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje1').innerHTML = '103'; document.getElementById('aspirantes1').innerHTML = '1083'; document.getElementById('seleccionados1').innerHTML = '65';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje2').innerHTML = '76'; document.getElementById('aspirantes2').innerHTML = '334'; document.getElementById('seleccionados2').innerHTML = '99';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje3').innerHTML = '73'; document.getElementById('aspirantes3').innerHTML = '652'; document.getElementById('seleccionados3').innerHTML = '177';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Acatlán'; document.getElementById('puntaje4').innerHTML = '91'; document.getElementById('aspirantes4').innerHTML = '916'; document.getElementById('seleccionados4').innerHTML = '70';
+
+            } else if (strUser == 3 & strUser1text == 4) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Contaduría y Administración'; document.getElementById('puntaje1').innerHTML = '96'; document.getElementById('aspirantes1').innerHTML = '6634'; document.getElementById('seleccionados1').innerHTML = '580';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Contaduría y Administración'; document.getElementById('puntaje2').innerHTML = '90'; document.getElementById('aspirantes2').innerHTML = '1164'; document.getElementById('seleccionados2').innerHTML = '123';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Contaduría y Administración'; document.getElementById('puntaje3').innerHTML = '93'; document.getElementById('aspirantes3').innerHTML = '2392'; document.getElementById('seleccionados3').innerHTML = '175';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje4').innerHTML = '76'; document.getElementById('aspirantes4').innerHTML = '2072'; document.getElementById('seleccionados4').innerHTML = '320';
+
+            } else if (strUser == 3 & strUser1text == 5) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Derecho'; document.getElementById('puntaje1').innerHTML = '94'; document.getElementById('aspirantes1').innerHTML = '6986'; document.getElementById('seleccionados1').innerHTML = '544';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Derecho'; document.getElementById('puntaje2').innerHTML = '76'; document.getElementById('aspirantes2').innerHTML = '1337'; document.getElementById('seleccionados2').innerHTML = '310';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Derecho'; document.getElementById('puntaje3').innerHTML = '69'; document.getElementById('aspirantes3').innerHTML = '2898'; document.getElementById('seleccionados3').innerHTML = '700';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Acatlán'; document.getElementById('puntaje4').innerHTML = '89'; document.getElementById('aspirantes4').innerHTML = '2974'; document.getElementById('seleccionados4').innerHTML = '195';
+                document.getElementById('modalidad5').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel5').innerHTML = 'FES Acatlán'; document.getElementById('puntaje5').innerHTML = '66'; document.getElementById('aspirantes5').innerHTML = '440'; document.getElementById('seleccionados5').innerHTML = '130';
+                document.getElementById('modalidad6').innerHTML = 'Escolarizado'; document.getElementById('plantel6').innerHTML = 'FES Aragón'; document.getElementById('puntaje6').innerHTML = '93'; document.getElementById('aspirantes6').innerHTML = '5151'; document.getElementById('seleccionados6').innerHTML = '235';
+                document.getElementById('modalidad7').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel7').innerHTML = 'FES Aragón'; document.getElementById('puntaje7').innerHTML = '66'; document.getElementById('aspirantes7').innerHTML = '557'; document.getElementById('seleccionados7').innerHTML = '105';
+
+            } else if (strUser == 3 & strUser1text == 6) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Economía'; document.getElementById('puntaje1').innerHTML = '90'; document.getElementById('aspirantes1').innerHTML = '2415'; document.getElementById('seleccionados1').innerHTML = '470';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Economía'; document.getElementById('puntaje2').innerHTML = '84'; document.getElementById('aspirantes2').innerHTML = '411'; document.getElementById('seleccionados2').innerHTML = '95';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Economía'; document.getElementById('puntaje3').innerHTML = '85'; document.getElementById('aspirantes3').innerHTML = '1019'; document.getElementById('seleccionados3').innerHTML = '220';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Acatlán'; document.getElementById('puntaje4').innerHTML = '86'; document.getElementById('aspirantes4').innerHTML = '888'; document.getElementById('seleccionados4').innerHTML = '137';
+
+            } else if (strUser == 3 & strUser1text == 7) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '92'; document.getElementById('aspirantes1').innerHTML = '199'; document.getElementById('seleccionados1').innerHTML = '35';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje2').innerHTML = '88'; document.getElementById('aspirantes2').innerHTML = '75'; document.getElementById('seleccionados2').innerHTML = '26';
+
+            } else if (strUser == 3 & strUser1text == 8) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje1').innerHTML = '84'; document.getElementById('aspirantes1').innerHTML = '671'; document.getElementById('seleccionados1').innerHTML = '75';
+
+            } else if (strUser == 3 & strUser1text == 9) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Aragón'; document.getElementById('puntaje1').innerHTML = '69'; document.getElementById('aspirantes1').innerHTML = '296'; document.getElementById('seleccionados1').innerHTML = '93';
+
+            } else if (strUser == 3 & strUser1text == 10) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje1').innerHTML = '108'; document.getElementById('aspirantes1').innerHTML = '1806'; document.getElementById('seleccionados1').innerHTML = '55';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje2').innerHTML = '85'; document.getElementById('aspirantes2').innerHTML = '309'; document.getElementById('seleccionados2').innerHTML = '47';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje3').innerHTML = '78'; document.getElementById('aspirantes3').innerHTML = '799'; document.getElementById('seleccionados3').innerHTML = '123';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Acatlán'; document.getElementById('puntaje4').innerHTML = '98'; document.getElementById('aspirantes4').innerHTML = '1530'; document.getElementById('seleccionados4').innerHTML = '60';
+                document.getElementById('modalidad5').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel5').innerHTML = 'FES Acatlán'; document.getElementById('puntaje5').innerHTML = '64'; document.getElementById('aspirantes5').innerHTML = '245'; document.getElementById('seleccionados5').innerHTML = '80';
+                document.getElementById('modalidad6').innerHTML = 'Escolarizado'; document.getElementById('plantel6').innerHTML = 'FES Aragón'; document.getElementById('puntaje6').innerHTML = '97'; document.getElementById('aspirantes6').innerHTML = '2204'; document.getElementById('seleccionados6').innerHTML = '75';
+                document.getElementById('modalidad7').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel7').innerHTML = 'FES Aragón'; document.getElementById('puntaje7').innerHTML = '74'; document.getElementById('aspirantes7').innerHTML = '229'; document.getElementById('seleccionados7').innerHTML = '59';
+
+            } else if (strUser == 3 & strUser1text == 11) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje1').innerHTML = '89'; document.getElementById('aspirantes1').innerHTML = '411'; document.getElementById('seleccionados1').innerHTML = '78';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje2').innerHTML = '79'; document.getElementById('aspirantes2').innerHTML = '150'; document.getElementById('seleccionados2').innerHTML = '56';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje3').innerHTML = '62'; document.getElementById('aspirantes3').innerHTML = '279'; document.getElementById('seleccionados3').innerHTML = '120';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Acatlán'; document.getElementById('puntaje4').innerHTML = '66'; document.getElementById('aspirantes4').innerHTML = '406'; document.getElementById('seleccionados4').innerHTML = '80';
+                document.getElementById('modalidad5').innerHTML = 'Escolarizado'; document.getElementById('plantel5').innerHTML = 'FES Aragón'; document.getElementById('puntaje5').innerHTML = '85'; document.getElementById('aspirantes5').innerHTML = '294'; document.getElementById('seleccionados5').innerHTML = '45';
+
+            } else if (strUser == 3 & strUser1text == 12) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Trabajo Social'; document.getElementById('puntaje1').innerHTML = '74'; document.getElementById('aspirantes1').innerHTML = '2501'; document.getElementById('seleccionados1').innerHTML = '325';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Escuela Nacional de Trabajo Social'; document.getElementById('puntaje2').innerHTML = '74'; document.getElementById('aspirantes2').innerHTML = '366'; document.getElementById('seleccionados2').innerHTML = '34';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Escuela Nacional de Trabajo Social'; document.getElementById('puntaje3').innerHTML = '58'; document.getElementById('aspirantes3').innerHTML = '679'; document.getElementById('seleccionados3').innerHTML = '138';
+
+            } else if (strUser == 3 & strUser1text == 13) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato'; document.getElementById('puntaje1').innerHTML = '81'; document.getElementById('aspirantes1').innerHTML = '288'; document.getElementById('seleccionados1').innerHTML = '43';
+
+            } else if (strUser == 3 & strUser1text == 14) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato'; document.getElementById('puntaje1').innerHTML = '41'; document.getElementById('aspirantes1').innerHTML = '67'; document.getElementById('seleccionados1').innerHTML = '64';
+
+            } else if (strUser == 3 & strUser1text == 15) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '94'; document.getElementById('aspirantes1').innerHTML = '1457'; document.getElementById('seleccionados1').innerHTML = '76';
+
+            } else if (strUser == 3 & strUser1text == 16) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Aragón'; document.getElementById('puntaje1').innerHTML = '93'; document.getElementById('aspirantes1').innerHTML = '2141'; document.getElementById('seleccionados1').innerHTML = '135';
+
+            } else if (strUser == 3 & strUser1text == 17) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '49'; document.getElementById('aspirantes1').innerHTML = '28'; document.getElementById('seleccionados1').innerHTML = '51';
+
+            } else if (strUser == 3 & strUser1text == 18) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Ciencias Políticas y Sociales'; document.getElementById('puntaje1').innerHTML = '97'; document.getElementById('aspirantes1').innerHTML = '680'; document.getElementById('seleccionados1').innerHTML = '100';
+
+            } else if (strUser == 3 & strUser1text == 19) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato'; document.getElementById('puntaje1').innerHTML = '45'; document.getElementById('aspirantes1').innerHTML = '27'; document.getElementById('seleccionados1').innerHTML = '90';
+
+            } else if (strUser == 3 & strUser1text == 20) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Ciencias de la Tierra'; document.getElementById('puntaje1').innerHTML = '98'; document.getElementById('aspirantes1').innerHTML = '68'; document.getElementById('seleccionados1').innerHTML = '15';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Mérida, Yucatán'; document.getElementById('puntaje2').innerHTML = '45'; document.getElementById('aspirantes2').innerHTML = '15'; document.getElementById('seleccionados2').innerHTML = '41';
+
+            }
+
+            window.location.href = '#bloque_dos';
+        }
+
+        function obtenerCarrera4() {
+
+            document.getElementById('modalidad1').innerHTML = ' '; document.getElementById('plantel1').innerHTML = ' '; document.getElementById('puntaje1').innerHTML = ' '; document.getElementById('aspirantes1').innerHTML = ' '; document.getElementById('seleccionados1').innerHTML = ' ';
+            document.getElementById('modalidad2').innerHTML = ' '; document.getElementById('plantel2').innerHTML = ' '; document.getElementById('puntaje2').innerHTML = ' '; document.getElementById('aspirantes2').innerHTML = ' '; document.getElementById('seleccionados2').innerHTML = ' ';
+            document.getElementById('modalidad3').innerHTML = ' '; document.getElementById('plantel3').innerHTML = ' '; document.getElementById('puntaje3').innerHTML = ' '; document.getElementById('aspirantes3').innerHTML = ' '; document.getElementById('seleccionados3').innerHTML = ' ';
+            document.getElementById('modalidad4').innerHTML = ' '; document.getElementById('plantel4').innerHTML = ' '; document.getElementById('puntaje4').innerHTML = ' '; document.getElementById('aspirantes4').innerHTML = ' '; document.getElementById('seleccionados4').innerHTML = ' ';
+            document.getElementById('modalidad5').innerHTML = ' '; document.getElementById('plantel5').innerHTML = ' '; document.getElementById('puntaje5').innerHTML = ' '; document.getElementById('aspirantes5').innerHTML = ' '; document.getElementById('seleccionados5').innerHTML = ' ';
+
+            var strUser = e.options[e.selectedIndex].value;
+            var strUser1text = eA4.options[eA4.selectedIndex].value;
+
+            var strUserText = e.options[e.selectedIndex].text;
+            var strUser1 = eA4.options[eA4.selectedIndex].text;
+
+            document.getElementById("nombreArea").innerHTML = strUserText;
+            document.getElementById("CarreraUnam").innerHTML = strUser1;
+
+            if (strUser == 4 & strUser1text == 1) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Artes y Diseño'; document.getElementById('puntaje1').innerHTML = '107'; document.getElementById('aspirantes1').innerHTML = '2374'; document.getElementById('seleccionados1').innerHTML = '30';
+
+            } else if (strUser == 4 & strUser1text == 2) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Música'; document.getElementById('puntaje1').innerHTML = '17'; document.getElementById('aspirantes1').innerHTML = '125'; document.getElementById('seleccionados1').innerHTML = '61';
+
+            } else if (strUser == 4 & strUser1text == 3) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Música'; document.getElementById('puntaje1').innerHTML = '71'; document.getElementById('aspirantes1').innerHTML = '129'; document.getElementById('seleccionados1').innerHTML = '26';
+
+            } else if (strUser == 4 & strUser1text == 4) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Música'; document.getElementById('puntaje1').innerHTML = '55'; document.getElementById('aspirantes1').innerHTML = '99'; document.getElementById('seleccionados1').innerHTML = '33';
+
+            } else if (strUser == 4 & strUser1text == 5) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '71'; document.getElementById('aspirantes1').innerHTML = '552'; document.getElementById('seleccionados1').innerHTML = '96';
+
+            } else if (strUser == 4 & strUser1text == 6) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '36'; document.getElementById('aspirantes1').innerHTML = '181'; document.getElementById('seleccionados1').innerHTML = '84';
+
+            } else if (strUser == 4 & strUser1text == 7) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Música'; document.getElementById('puntaje1').innerHTML = '62'; document.getElementById('aspirantes1').innerHTML = '35'; document.getElementById('seleccionados1').innerHTML = '14';
+
+            } else if (strUser == 4 & strUser1text == 8) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '99'; document.getElementById('aspirantes1').innerHTML = '544'; document.getElementById('seleccionados1').innerHTML = '46';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje2').innerHTML = '93'; document.getElementById('aspirantes2').innerHTML = '308'; document.getElementById('seleccionados2').innerHTML = '42';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Acatlán'; document.getElementById('puntaje3').innerHTML = '76'; document.getElementById('aspirantes3').innerHTML = '272'; document.getElementById('seleccionados3').innerHTML = '60';
+
+            } else if (strUser == 4 & strUser1text == 9) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '100'; document.getElementById('aspirantes1').innerHTML = '658'; document.getElementById('seleccionados1').innerHTML = '35';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje2').innerHTML = '90'; document.getElementById('aspirantes2').innerHTML = '320'; document.getElementById('seleccionados2').innerHTML = '36';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Acatlán'; document.getElementById('puntaje3').innerHTML = '85'; document.getElementById('aspirantes3').innerHTML = '336'; document.getElementById('seleccionados3').innerHTML = '45';
+
+            } else if (strUser == 4 & strUser1text == 10) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado';
+
+            } else if (strUser == 4 & strUser1text == 11) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '98'; document.getElementById('aspirantes1').innerHTML = '397'; document.getElementById('seleccionados1').innerHTML = '45';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje2').innerHTML = '79'; document.getElementById('aspirantes2').innerHTML = '259'; document.getElementById('seleccionados2').innerHTML = '95';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'FES Acatlán'; document.getElementById('puntaje3').innerHTML = '82'; document.getElementById('aspirantes3').innerHTML = '237'; document.getElementById('seleccionados3').innerHTML = '38';
+
+            } else if (strUser == 4 & strUser1text == 12) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '51'; document.getElementById('aspirantes1').innerHTML = '42'; document.getElementById('seleccionados1').innerHTML = '29';
+
+            } else if (strUser == 4 & strUser1text == 13) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '46'; document.getElementById('aspirantes1').innerHTML = '44'; document.getElementById('seleccionados1').innerHTML = '43';
+
+            } else if (strUser == 4 & strUser1text == 14) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '66'; document.getElementById('aspirantes1').innerHTML = '309'; document.getElementById('seleccionados1').innerHTML = '123';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = ''; document.getElementById('puntaje2').innerHTML = '94'; document.getElementById('aspirantes2').innerHTML = '65'; document.getElementById('seleccionados2').innerHTML = '12';
+
+            } else if (strUser == 4 & strUser1text == 15) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '73'; document.getElementById('aspirantes1').innerHTML = '57'; document.getElementById('seleccionados1').innerHTML = '22';
+
+            } else if (strUser == 4 & strUser1text == 16) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '92'; document.getElementById('aspirantes1').innerHTML = '136'; document.getElementById('seleccionados1').innerHTML = '18';
+
+            } else if (strUser == 4 & strUser1text == 17) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '103'; document.getElementById('aspirantes1').innerHTML = '767'; document.getElementById('seleccionados1').innerHTML = '28';
+
+            } else if (strUser == 4 & strUser1text == 18) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '78'; document.getElementById('aspirantes1').innerHTML = '1999'; document.getElementById('seleccionados1').innerHTML = '140';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. Abierta'; document.getElementById('plantel2').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje2').innerHTML = '81'; document.getElementById('aspirantes2').innerHTML = '488'; document.getElementById('seleccionados2').innerHTML = '36';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje3').innerHTML = '78'; document.getElementById('aspirantes3').innerHTML = '1532'; document.getElementById('seleccionados3').innerHTML = '218';
+                document.getElementById('modalidad4').innerHTML = 'Escolarizado'; document.getElementById('plantel4').innerHTML = 'FES Acatlán'; document.getElementById('puntaje4').innerHTML = '76'; document.getElementById('aspirantes4').innerHTML = '1669'; document.getElementById('seleccionados4').innerHTML = '80';
+                document.getElementById('modalidad5').innerHTML = 'Escolarizado'; document.getElementById('plantel5').innerHTML = 'FES Aragón'; document.getElementById('puntaje5').innerHTML = '76'; document.getElementById('aspirantes5').innerHTML = '2525'; document.getElementById('seleccionados5').innerHTML = '140';
+
+            } else if (strUser == 4 & strUser1text == 19) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Música'; document.getElementById('puntaje1').innerHTML = '60'; document.getElementById('aspirantes1').innerHTML = '59'; document.getElementById('seleccionados1').innerHTML = '33';
+
+            } else if (strUser == 4 & strUser1text == 20) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Artes y Diseño'; document.getElementById('puntaje1').innerHTML = '109'; document.getElementById('aspirantes1').innerHTML = '2433'; document.getElementById('seleccionados1').innerHTML = '50';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'FES Cuautitlán'; document.getElementById('puntaje2').innerHTML = '105'; document.getElementById('aspirantes2').innerHTML = '1103'; document.getElementById('seleccionados2').innerHTML = '20';
+                document.getElementById('modalidad3').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel3').innerHTML = ''; document.getElementById('puntaje3').innerHTML = '85'; document.getElementById('aspirantes3').innerHTML = '1373'; document.getElementById('seleccionados3').innerHTML = '140';
+
+            } else if (strUser == 4 & strUser1text == 21) {
+                document.getElementById('modalidad1').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '45'; document.getElementById('aspirantes1').innerHTML = '29'; document.getElementById('seleccionados1').innerHTML = '68';
+
+            } else if (strUser == 4 & strUser1text == 22) {
+                document.getElementById('modalidad1').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '74'; document.getElementById('aspirantes1').innerHTML = '205'; document.getElementById('seleccionados1').innerHTML = '130';
+
+            } else if (strUser == 4 & strUser1text == 23) {
+                document.getElementById('modalidad1').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '43'; document.getElementById('aspirantes1').innerHTML = '43'; document.getElementById('seleccionados1').innerHTML = '59';
+
+            } else if (strUser == 4 & strUser1text == 24) {
+                document.getElementById('modalidad1').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '54'; document.getElementById('aspirantes1').innerHTML = '243'; document.getElementById('seleccionados1').innerHTML = '99';
+
+            } else if (strUser == 4 & strUser1text == 25) {
+                document.getElementById('modalidad1').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel1').innerHTML = 'FES Acatlán'; document.getElementById('puntaje1').innerHTML = '44'; document.getElementById('aspirantes1').innerHTML = '13'; document.getElementById('seleccionados1').innerHTML = '74';
+
+            } else if (strUser == 4 & strUser1text == 26) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '90'; document.getElementById('aspirantes1').innerHTML = '160'; document.getElementById('seleccionados1').innerHTML = '16';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato'; document.getElementById('puntaje2').innerHTML = '42'; document.getElementById('aspirantes2').innerHTML = '59'; document.getElementById('seleccionados2').innerHTML = '53';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Mérida, Yucatán'; document.getElementById('puntaje3').innerHTML = '42'; document.getElementById('aspirantes3').innerHTML = '49'; document.getElementById('seleccionados3').innerHTML = '65';
+
+            } else if (strUser == 4 & strUser1text == 27) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje1').innerHTML = '57'; document.getElementById('aspirantes1').innerHTML = '26'; document.getElementById('seleccionados1').innerHTML = '20';
+
+            } else if (strUser == 4 & strUser1text == 28) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '40'; document.getElementById('aspirantes1').innerHTML = '24'; document.getElementById('seleccionados1').innerHTML = '36';
+
+            } else if (strUser == 4 & strUser1text == 29) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '48'; document.getElementById('aspirantes1').innerHTML = '52'; document.getElementById('seleccionados1').innerHTML = '42';
+
+            } else if (strUser == 4 & strUser1text == 30) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '72'; document.getElementById('aspirantes1').innerHTML = '84'; document.getElementById('seleccionados1').innerHTML = '37';
+
+            } else if (strUser == 4 & strUser1text == 31) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Facultad de Artes y Diseño, Campus Taxco, Guerrero'; document.getElementById('puntaje1').innerHTML = '79'; document.getElementById('aspirantes1').innerHTML = '167'; document.getElementById('seleccionados1').innerHTML = '20';
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '83'; document.getElementById('aspirantes1').innerHTML = '281'; document.getElementById('seleccionados1').innerHTML = '41';
+
+            } else if (strUser == 4 & strUser1text == 32) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Centro Universitario de Teatro'; document.getElementById('puntaje1').innerHTML = '75'; document.getElementById('aspirantes1').innerHTML = '791'; document.getElementById('seleccionados1').innerHTML = '150';
+
+            } else if (strUser == 4 & strUser1text == 33) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '47'; document.getElementById('aspirantes1').innerHTML = '13'; document.getElementById('seleccionados1').innerHTML = '41';
+                document.getElementById('modalidad2').innerHTML = 'SUAyED-mod. a Distancia'; document.getElementById('plantel2').innerHTML = ''; document.getElementById('puntaje2').innerHTML = '42'; document.getElementById('aspirantes2').innerHTML = '101'; document.getElementById('seleccionados2').innerHTML = '205';
+                document.getElementById('modalidad3').innerHTML = 'Escolarizado'; document.getElementById('plantel3').innerHTML = 'Facultad de Filosofía y Letras'; document.getElementById('puntaje3').innerHTML = '76'; document.getElementById('aspirantes3').innerHTML = '206'; document.getElementById('seleccionados3').innerHTML = '15';
+
+            } else if (strUser == 4 & strUser1text == 34) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad Morelia, Michoacán'; document.getElementById('puntaje1').innerHTML = '83'; document.getElementById('aspirantes1').innerHTML = '103'; document.getElementById('seleccionados1').innerHTML = '17';
+
+            } else if (strUser == 4 & strUser1text == 35) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Lenguas, Lingüística y Traducción'; document.getElementById('puntaje1').innerHTML = '97'; document.getElementById('aspirantes1').innerHTML = '204'; document.getElementById('seleccionados1').innerHTML = '20';
+
+            } else if (strUser == 4 & strUser1text == 36) {
+                document.getElementById('modalidad1').innerHTML = 'Escolarizado'; document.getElementById('plantel1').innerHTML = 'Escuela Nacional de Lenguas, Lingüística y Traducción'; document.getElementById('puntaje1').innerHTML = '114'; document.getElementById('aspirantes1').innerHTML = '1183'; document.getElementById('seleccionados1').innerHTML = '15';
+                document.getElementById('modalidad2').innerHTML = 'Escolarizado'; document.getElementById('plantel2').innerHTML = 'Escuela Nacional de Estudios Superiores, Unidad León, Guanajuato (Campus San Miguel Allende)'; document.getElementById('puntaje2').innerHTML = '56'; document.getElementById('aspirantes2').innerHTML = '55'; document.getElementById('seleccionados2').innerHTML = '22';
+
+            }
+
+            window.location.href = '#bloque_dos';
+        }
+
+
+        var e = document.getElementById("AREA");
+        function show() {
+            var strUser = e.options[e.selectedIndex].value;
+            console.log(strUser);
+
+            if (strUser == 1) {
+                document.getElementById("label2").style.display = "";
+
+                document.getElementById("AREA1").style.display = "";
+
+                document.getElementById("AREA2").style.display = "none";
+                document.getElementById("AREA2").selectedIndex = 0;
+                document.getElementById("BTN2").style.display = "none";
+
+                document.getElementById("AREA3").style.display = "none";
+                document.getElementById("AREA3").selectedIndex = 0;
+                document.getElementById("BTN3").style.display = "none";
+
+                document.getElementById("AREA4").style.display = "none";
+                document.getElementById("AREA4").selectedIndex = 0;
+                document.getElementById("BTN4").style.display = "none";
+
+            } else if (strUser == 2) {
+                document.getElementById("label2").style.display = "";
+
+                document.getElementById("AREA1").style.display = "none";
+                document.getElementById("AREA1").selectedIndex = 0;
+                document.getElementById("BTN1").style.display = "none";
+
+                document.getElementById("AREA2").style.display = "";
+
+                document.getElementById("AREA3").style.display = "none";
+                document.getElementById("AREA3").selectedIndex = 0;
+                document.getElementById("BTN3").style.display = "none";
+
+                document.getElementById("AREA4").style.display = "none";
+                document.getElementById("AREA4").selectedIndex = 0;
+                document.getElementById("BTN4").style.display = "none";
+
+            } else if (strUser == 3) {
+                document.getElementById("label2").style.display = "";
+
+                document.getElementById("AREA1").style.display = "none";
+                document.getElementById("AREA1").selectedIndex = 0;
+                document.getElementById("BTN1").style.display = "none";
+
+                document.getElementById("AREA2").style.display = "none";
+                document.getElementById("AREA2").selectedIndex = 0;
+                document.getElementById("BTN2").style.display = "none";
+
+                document.getElementById("AREA3").style.display = "";
+
+                document.getElementById("AREA4").style.display = "none";
+                document.getElementById("AREA4").selectedIndex = 0;
+                document.getElementById("BTN4").style.display = "none";
+
+            } else if (strUser == 4) {
+                document.getElementById("label2").style.display = "";
+
+                document.getElementById("AREA1").style.display = "none";
+                document.getElementById("AREA1").selectedIndex = 0;
+                document.getElementById("BTN1").style.display = "none";
+
+                document.getElementById("AREA2").style.display = "none";
+                document.getElementById("AREA2").selectedIndex = 0;
+                document.getElementById("BTN2").style.display = "none";
+
+                document.getElementById("AREA3").style.display = "none";
+                document.getElementById("AREA3").selectedIndex = 0;
+                document.getElementById("BTN3").style.display = "none";
+
+                document.getElementById("AREA4").style.display = "";
+
+
+
+            } else {
+                document.getElementById("AREA1").style.display = "none";
+                document.getElementById("AREA1").selectedIndex = 0;
+
+                document.getElementById("AREA2").style.display = "none";
+                document.getElementById("AREA2").selectedIndex = 0;
+
+                document.getElementById("AREA3").style.display = "none";
+                document.getElementById("AREA3").selectedIndex = 0;
+
+                document.getElementById("AREA4").style.display = "none";
+                document.getElementById("AREA4").selectedIndex = 0;
+
+                document.getElementById("label2").style.display = "none";
+
+            }
+        }
+        e.onchange = show;
+        show();
+
+    </script>
+
+    <!--EA1-->
+    <script>
+        var eA1 = document.getElementById("AREA1");
+
+        function showButtonA1() {
+            var strUser1 = eA1.options[eA1.selectedIndex].value;
+            console.log(strUser1);
+
+            if (strUser1 == 0) {
+                document.getElementById("BTN1").style.display = "none";
+
+            } else {
+                document.getElementById("BTN1").style.display = "";
+            }
+        }
+
+        eA1.onchange = showButtonA1;
+        showButtonA1();
+    </script>
+
+    <!--EA2-->
+    <script>
+        var eA2 = document.getElementById("AREA2");
+
+        function showButtonA2() {
+            var strUser2 = eA2.options[eA2.selectedIndex].value;
+            console.log(strUser2);
+
+            if (strUser2 == 0) {
+                document.getElementById("BTN2").style.display = "none";
+
+            } else {
+                document.getElementById("BTN2").style.display = "";
+            }
+        }
+
+        eA2.onchange = showButtonA2;
+        showButtonA2();
+    </script>
+
+    <!--EA3-->
+    <script>
+        var eA3 = document.getElementById("AREA3");
+
+        function showButtonA3() {
+            var strUser3 = eA3.options[eA3.selectedIndex].value;
+            console.log(strUser3);
+
+            if (strUser3 == 0) {
+                document.getElementById("BTN3").style.display = "none";
+
+            } else {
+                document.getElementById("BTN3").style.display = "";
+            }
+        }
+
+        eA3.onchange = showButtonA3;
+        showButtonA3();
+    </script>
+
+    <!--EA4-->
+    <script>
+        var eA4 = document.getElementById("AREA4");
+
+        function showButtonA4() {
+            var strUser4 = eA4.options[eA4.selectedIndex].value;
+            console.log(strUser4);
+
+            if (strUser4 == 0) {
+                document.getElementById("BTN4").style.display = "none";
+
+            } else {
+                document.getElementById("BTN4").style.display = "";
+            }
+        }
+
+        eA4.onchange = showButtonA4;
+        showButtonA4();
+    </script>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
